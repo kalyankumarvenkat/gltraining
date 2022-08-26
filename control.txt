@@ -1,0 +1,14 @@
+LOAD Data
+infile 'data.txt'
+Append
+into TABLE story_pm
+Fields terminated by ','
+(SNO                ,    
+STORY_NAME         ,
+STORY_DETAILS_FILE_NAME FILLER CHAR(100),
+STORY_DETAILS     LOBFILE(STORY_DETAILS_FILE_NAME) TERMINATED BY EOF,             
+IMAGE1_FILE_NAME             FILLER CHAR(100),
+IMAGE1             LOBFILE(IMAGE1_FILE_NAME) TERMINATED BY EOF,          
+IMAGE2_FILE_NAME          FILLER CHAR(100),
+IMAGE2             LOBFILE(IMAGE2_FILE_NAME) TERMINATED BY EOF)         
+

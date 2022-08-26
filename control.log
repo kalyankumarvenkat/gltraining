@@ -1,0 +1,60 @@
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Thu Aug 25 16:56:21 2022
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   control.txt
+Data File:      data.txt
+  Bad File:     data.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table STORY_PM, loaded from every logical record.
+Insert option in effect for this table: APPEND
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+SNO                                 FIRST     *   ,       CHARACTER            
+STORY_NAME                           NEXT     *   ,       CHARACTER            
+STORY_DETAILS_FILE_NAME              NEXT   100   ,       CHARACTER            
+  (FILLER FIELD)
+STORY_DETAILS                     DERIVED     *  EOF      CHARACTER            
+    Dynamic LOBFILE.  Filename in field STORY_DETAILS_FILE_NAME
+IMAGE1_FILE_NAME                     NEXT   100   ,       CHARACTER            
+  (FILLER FIELD)
+IMAGE1                            DERIVED     *  EOF      CHARACTER            
+    Dynamic LOBFILE.  Filename in field IMAGE1_FILE_NAME
+IMAGE2_FILE_NAME                     NEXT   100   ,       CHARACTER            
+  (FILLER FIELD)
+IMAGE2                            DERIVED     *  EOF      CHARACTER            
+    Dynamic LOBFILE.  Filename in field IMAGE2_FILE_NAME
+
+
+Table STORY_PM:
+  1 Row successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  52608 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             1
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Thu Aug 25 16:56:21 2022
+Run ended on Thu Aug 25 16:56:26 2022
+
+Elapsed time was:     00:00:04.67
+CPU time was:         00:00:00.05

@@ -1,0 +1,1 @@
+2,Four Friends,Moral_Story2.txt,Image1_Story2.jpg,Image2_Story2.jpg
